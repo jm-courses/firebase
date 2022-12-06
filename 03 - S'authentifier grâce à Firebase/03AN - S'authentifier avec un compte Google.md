@@ -89,7 +89,6 @@ const credentials = await signInWithPopup(auth, provider);
 const user = credentials.user;
 
 console.log(`Utilisateur connecté via Google !`, user);
-
 ```
 
 > 💡 **Note :**
