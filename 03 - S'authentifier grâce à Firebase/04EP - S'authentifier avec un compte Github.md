@@ -92,6 +92,38 @@ const credentials = await signInWithPopup(auth, provider);
 // …
 ```
 
+## Challenge : Mettre en place l'authentification dans le projet
+
+Dans le projet « Firebase Playground » livré avec ce cours, il y a une page HTML dédiée à l'authentification qui regroupe 3 fonctionnalités souhaitées :
+
+![](./images/auth-todo.png)
+
+1. Fonctionnalité 1 : L'inscription d'un utilisateur via un email et mot de passe
+2. Fonctionnalité 2 : L'authentification d'un utilisateur via son email et mot de passe
+3. Fonctionnalité 3 : L'authentification d'un utilisateur via les fournisseurs « Github » et « Google »
+
+Vous allez dans la dernière partie de ce chapitre devoir mettre en place ces fonctionnalités.
+
+Vous travaillerez principalement dans le fichier `./public/scripts/authentication.js` et utiliserez les fonctions du SDK JavaScript vues dans les chapitres précédents.
+
+Vous devrez afficher un message dans la page informant de chaque tentative réussie d'inscription et d'authentification :
+
+![](./images/auth-success-demo.png)
+
+Vous penserez également à gérer les erreurs potentielles retournées par Firebase dans la page web.
+
+**Bonus :**
+> Lors d'une connexion réussie (quelle qu'elle soit), mettez également en place une fonction faisant la mise à jour du DOM pour le header de la page avec les informations de l'utilisateur :
+> ![](./images/auth-header-demo.png)
+> (Dans le cas par défaut où l'utilisateur n'est pas authentifié, ne rien afficher)
+
+#### Conseils :
+
+N'hésitez pas à ajouter des classes CSS ou identifiants dans le HTML si vous en ressentez le besoin pour manipuler les éléments du DOM.
+
+Si vous avez l'impression d'écrire du code redondant, n'hésitez pas à vous fabriquer des fonctions JS réutilisables (par exemple pour gérer l'affichage des erreurs sous forme d'alertes) et à les placer dans un fichier module `.js` distinct que vous pourrez **importer** dans votre fichier principal.
+
+Bon courage ! 🙂
 
 ---
 
@@ -112,4 +144,4 @@ Il ne faut que créer une application tierce et récupérer les identifiants pub
 
 Maintenant que vous savez authentifier vos utilisateurs de toutes les façons possibles, voyons comment gérer un autre problème : la persistence de la session lors du rafraîchissement de la page.
 
-Rendez-vous dans le prochain chapitre.
+Rendez-vous dans le prochain chapitre pour cela 🙂
