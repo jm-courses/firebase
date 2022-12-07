@@ -34,7 +34,7 @@ Le temps de réponse garanti est inférieur à 500 milli-secondes et est adapté
 Le format simplifié de noeuds JSON permet des échanges rapides, mais n'offre pas de flexibilité dans la structuration des données (relations, types).
 
 ## Firestore
-
+client
 Cloud Firestore est arrivé peu après Real-time DB et permet également de faire du temps réel avec une latence légèrement plus élevée, mais offre un modèle de structuration des données plus complexe avec des collections et des documents, dont les propriétés peuvent être typées (string, nombre, date, map, geopoint, …).
 
 De plus, Cloud Firestore offre une capacité de stockage très grande en tirant partie de l'infrastructure de Google et permet au développeur web de ne pas se soucier des problématiques de charge serveur et de scalabilité.
@@ -53,7 +53,7 @@ Il est également possible d'acheter un nom de domaine chez un registar indépen
 
 Firebase est une plateforme de développement complète offrant de nombreux autres services d'analyses, de tests et de performances.
 
-![](./images/firebase-plateforme.png)
+<p align="center"><img src="./images/firebase-plateforme.png"></p>
 
 ---
 

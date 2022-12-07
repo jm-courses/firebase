@@ -22,11 +22,11 @@ Dans ce chapitre, nous allons faire la procédure ensemble pour le nouveau fourn
 
 Pour commencer, retournez dans votre console Firebase et ajouter un nouveau provider comme vous l'aviez fait pour Google. Choisissez _« Github »_ dans _« Autres fournisseurs »_ 
 
-![](./images/auth-activate-github.png)
+<p align="center"><img src="./images/auth-activate-github.png"></p>
 
 Dans la popup qui s'ouvre, cliquez sur le bouton _« Activer »_
 
-![](./images/auth-activate-github-2.png)
+<p align="center"><img src="./images/auth-activate-github-2.png"></p>
 
 Notez que Firebase nous demande ici 2 éléments :
 
@@ -39,7 +39,7 @@ Notez également la valeur de l'URL de rappel d'autorisation (en vert sur le sch
 
 Nous allons maintenant créer une application Github. Pour cela, ouvrez un nouvel onglet de navigation web et rendez-vous à l'adresse suivante : https://github.com/settings/developers (si vous n'avez pas encore de compte Github, il va falloir en créer un pour pouvoir continuer).
 
-![](./images/auth-github-new-app.png)
+<p align="center"><img src="./images/auth-github-new-app.png"></p>
 
 > 💡 **Note :**
 >
@@ -58,18 +58,18 @@ Dans le formulaire qui s'affiche renseignez les champs demandés :
 - **Authorization callback URL** : URL de rappel d'autorisation fournie par Firebase.
   C'est à URL que Github devra rediriger après une tentative de connexion.
 
-![](./images/auth-github-new-app-2.png)
+<p align="center"><img src="./images/auth-github-new-app-2.png"></p>
 
 Laissez les autres champs par défaut et validez en cliquant sur « Register application »
 
 À la suite de cette opération, vous allez arriver sur un nouvel écran :
 
-![](./images/auth-github-new-app-3.png)
+<p align="center"><img src="./images/auth-github-new-app-3.png"></p>
 
 1. Votre identifiant client pour cette application, qu'il faudra copier vers le champs "ID client" de la popup Firebase.
 2. Cliquez-ici pour générer un "secret token", qu'il faudra ensuite également copier vers le champs "Code secret du client" de la popup Firebase.
 
-![](./images/auth-activate-github-3.png)
+<p align="center"><img src="./images/auth-activate-github-3.png"></p>
 
 Une fois ces informations renseignées dans la configuration du provider Firebase, vous pouvez enregistrer et fermer.
 
@@ -96,7 +96,7 @@ const credentials = await signInWithPopup(auth, provider);
 
 Dans le projet « Firebase Playground » livré avec ce cours, il y a une page HTML dédiée à l'authentification qui regroupe 3 fonctionnalités souhaitées :
 
-![](./images/auth-todo.png)
+<p align="center"><img src="./images/auth-todo.png"></p>
 
 1. Fonctionnalité 1 : L'inscription d'un utilisateur via un email et mot de passe
 2. Fonctionnalité 2 : L'authentification d'un utilisateur via son email et mot de passe
@@ -108,13 +108,13 @@ Vous travaillerez principalement dans le fichier `./public/scripts/authenticatio
 
 Vous devrez afficher un message dans la page informant de chaque tentative réussie d'inscription et d'authentification :
 
-![](./images/auth-success-demo.png)
+<p align="center"><img src="./images/auth-success-demo.png"></p>
 
 Vous penserez également à gérer les erreurs potentielles retournées par Firebase dans la page web.
 
 **Bonus :**
 > Lors d'une connexion réussie (quelle qu'elle soit), mettez également en place une fonction faisant la mise à jour du DOM pour le header de la page avec les informations de l'utilisateur :
-> ![](./images/auth-header-demo.png)
+> <p align="center"><img src="./images/auth-header-demo.png"></p>
 > (Dans le cas par défaut où l'utilisateur n'est pas authentifié, ne rien afficher)
 
 #### Conseils :

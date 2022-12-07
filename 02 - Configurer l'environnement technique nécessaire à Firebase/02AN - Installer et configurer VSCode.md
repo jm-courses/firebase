@@ -25,37 +25,37 @@ Afin de pouvoir développer dans de bonnes conditions, vous utiliserez plusieurs
 
 Les extensions s'installent en cliquant sur l'icône d'extensions dans la barre latérale de gauche :
 
-![](./images/vscode-extensions.png)
+<p align="center"><img src="./images/vscode-extensions.png"></p>
 
 Dans la barre de recherche, recherchez et installez les extensions suivantes :
 
 1. **Live Server**
 
-![](./images/vscode-live-server.png)
+<p align="center"><img src="./images/vscode-live-server.png"></p>
 
 Cette extension permet de démarrer un serveur web local directement à partir de VSCode.
 
 2. **Path Intellisense**
 
-![](./images/vscode-path-intellisense.png)
+<p align="center"><img src="./images/vscode-path-intellisense.png"></p>
 
 Cette extension permettra d'auto-compléter les noms de fichiers qu'elle trouvera dans votre arborescence.
 
 3. **NPM Intellisense**
 
-![](./images/vscode-npm-intellisense.png)
+<p align="center"><img src="./images/vscode-npm-intellisense.png"></p>
 
 Cette extension permet de trouver et auto-compléter les librairies et fonctions installées via NPM.
 
 4. **EditorConfig**
 
-![](./images/vscode-editorconfig.png)
+<p align="center"><img src="./images/vscode-editorconfig.png"></p>
 
 Cette extension offre la possibilité de configurer correctement les réglages de fichiers (indentations, encodage, fins de ligne, …) au sein d'un projet.
 
 5. **Prettier**
 
-![](./images/vscode-prettier.png)
+<p align="center"><img src="./images/vscode-prettier.png"></p>
 
 Cette extension fournit la possibilité de reformater correctement le code HTML, CSS et JavaScript lors de la sauvegarde, via une configuration précise.
 

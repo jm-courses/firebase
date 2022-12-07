@@ -33,17 +33,17 @@ Si vous avez déjà installé Node.js auparavant, assurez-vous d'avoir une versi
 
 Rendez-vous sur le site internet et télécharger la version la plus récente : **https://nodejs.org/fr/**
 
-![](./images/node-install.png)
+<p align="center"><img src="./images/node-install.png"></p>
 
 Vous choisirez généralement la version LTS (Long Term Support).
 
 Laissez-vous ensuite guider par le programme d'installation, et assurez-vous si vous êtes sous Windows que vous avez bien l'option *« Add to PATH »* de présente :
 
-![](./images/node-install-path.png)
+<p align="center"><img src="./images/node-install-path.png"></p>
 
 Si le programme d'installation vous le propose, cochez également la case pour installer les outils de build supplémentaire :
 
-![](./images/node-install-tools.png)
+<p align="center"><img src="./images/node-install-tools.png"></p>
 
 Une fois l'installation terminée, fermez le programme. Et voilà ! Vous avez installé Node.js sur votre ordinateur !
 
@@ -52,7 +52,7 @@ Une fois l'installation terminée, fermez le programme. Et voilà ! Vous avez in
 Afin de vérifier que tout fonctionne correctement, ouvrez un terminal sur votre ordinateur.
 
 > Il est recommandé sous Windows de ne plus utiliser l'invite de commande classique « cmd.exe » et d'utiliser **au minimum** le programme « Powershell », bien plus moderne et évolué.
-> ![](./images/best-terminal.png)
+> <p align="center"><img src="./images/best-terminal.png"></p>
 
 Tapez les commandes suivantes :
 
@@ -68,7 +68,7 @@ npm --version
 
 Dans les deux cas, vous devriez obtenir un numéro de version correspondant à celle que vous venez d'installer :
 
-![](./images/node-version.png)
+<p align="center"><img src="./images/node-version.png"></p>
 
 Si vous obtenez une erreur, essayez de fermer complètement votre terminal et de le rouvrir. Si le problème persiste, vous devrez peut-être redémarrer votre ordinateur pour que les variables d'environnement soient mises à jour.
 

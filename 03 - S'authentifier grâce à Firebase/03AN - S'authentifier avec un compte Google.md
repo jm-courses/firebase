@@ -30,7 +30,7 @@ Dans un premier temps, rendez-vous dans votre console Firebase, dans la section 
 
 Cliquez sur le bouton _« Ajouter un fournisseur »_ et choisissez _« Google »_
 
-![](./images/auth-activate-google.png)
+<p align="center"><img src="./images/auth-activate-google.png"></p>
 
 Dans la popup qui s'ouvre, cliquez sur le bouton _« Activer »_
 
@@ -38,14 +38,14 @@ Le nom public du projet est automatiquement rempli avec le nom de votre projet F
 
 Renseignez simplement une adresse e-mail d'assistance associé au projet, et cliquez sur _« Enregistrer »_
 
-![](./images/auth-activate-google-2.png)
+<p align="center"><img src="./images/auth-activate-google-2.png"></p>
 
 > ℹ️ **À noter** :
 > En réalité sous cette opération, Firebase a créé et configuré de façon automatique une nouvelle **application Google** à votre nom de compte.
 > Cette application Google a été associée automatiquement à votre application Firebase via un **client ID** et un **code secret**.
 > Si vous retourner sur le provider Google, vous observerez que ces éléments sont déjà renseignés dans la section _« Configuration du SDK Web »_ :
 > 
-> ![](./images/auth-google-sdk.png)
+> <p align="center"><img src="./images/auth-google-sdk.png"></p>
 >
 > S'agissant de produits Google, l'opération a pu être réalisée automatiquement pour nous faciliter la tâche, cependant lorsque nous voudrons utiliser un autre provider (comme Github), nous devrons réaliser cette étape nous-même en créant une **application Github**.
 > Nous aborderons cela dans le chapitre suivant, dédié à la connexion Github.

@@ -20,7 +20,7 @@ Rendez-vous dans votre console Firebase, dans la section "_Authentication_" du p
 2. Choisissez le fournisseur « _Adresse e-mail/Mot de passe_ »
 
 > **Figure 1**
-> ![](./images/auth-configure-email.png)
+> <p align="center"><img src="./images/auth-configure-email.png"></p>
 
 
 Dans la fenêtre qui s'ouvre ensuite (cf. figure 2):
@@ -29,7 +29,7 @@ Dans la fenêtre qui s'ouvre ensuite (cf. figure 2):
 2. Cliquez sur le bouton « _Enregistrer_ »
 
 > **Figure 2**
-> ![](./images/auth-configure-email-activate.png)
+> <p align="center"><img src="./images/auth-configure-email-activate.png"></p>
 
 La méthode d'authentification par email et mot de passe est maintenant prête !
 
@@ -79,7 +79,7 @@ En exécutant ce code, cela va créer le nouvel utilisateur dont l'identifiant e
 
 > On peut s'en rendre compte dans la console Firebase en allant voir dans l'onglet « _Users_ » (1), on constate que l'utilisateur « john.doe@example.com » a bien été créé (2)
 > 
-> ![](./images/auth-users.png)
+> <p align="center"><img src="./images/auth-users.png"></p>
 
 Nous voyons bien qu'avec Firebase, gérer l'inscription d'un nouvel utilisateur est d'une simplicité étonnante.
 
@@ -119,8 +119,8 @@ Si tout se passe correctement, l'ensemble des instructions du bloc `try` vont s'
 
 > 💡 **Note :**
 > Dans un véritable cas de figure, au lieu de faire un `console.log`, nous afficherions plutôt les messages d'erreur et de succès dans une `<div>` de la page web pour informer l'utilisateur :
-> ![](./images/auth-error.png)
-> ![](./images/auth-success.png)
+> <p align="center"><img src="./images/auth-error.png"></p>
+> <p align="center"><img src="./images/auth-success.png"></p>
 
 ## Connecter un utilisateur inscrit
 
