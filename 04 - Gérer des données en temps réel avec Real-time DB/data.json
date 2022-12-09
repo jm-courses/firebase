@@ -1,0 +1,19 @@
+{
+  "comments": {
+    "comm_01": {
+      "pseudo": "anish48",
+      "created_at": "2022-12-08T18:51:27.484Z",
+      "message": "Super article!"
+    },
+    "comm_02": {
+      "pseudo": "lucz",
+      "created_at": "2022-12-08T19:20:12.129Z",
+      "message": "Excellent! J'ai appris plein de choses."
+    },
+    "comm_03": {
+      "pseudo": "2iane",
+      "created_at": "2022-12-09T08:47:12.989Z",
+      "message": "Merci pour le partage!"
+    }
+  }
+}
