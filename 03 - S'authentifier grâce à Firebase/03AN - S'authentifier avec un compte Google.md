@@ -40,7 +40,7 @@ Renseignez simplement une adresse e-mail d'assistance associé au projet, et cli
 
 <p align="center"><img src="./images/auth-activate-google-2.png"></p>
 
-> ℹ️ **À noter** :
+> **Note** :
 > En réalité sous cette opération, Firebase a créé et configuré de façon automatique une nouvelle **application Google** à votre nom de compte.
 > Cette application Google a été associée automatiquement à votre application Firebase via un **client ID** et un **code secret**.
 > Si vous retourner sur le provider Google, vous observerez que ces éléments sont déjà renseignés dans la section _« Configuration du SDK Web »_ :
@@ -68,7 +68,7 @@ function signInWithPopup(
 
 Comme son nom l'indique, cette fonction permet de déclencher le processus d'authentification via Google en passant par une popup de connexion.
 
-> 💡 **Note :**
+> **Note** :
 > Si vous n'aimez pas les popups, sachez qu'il est possible de faire la même action via une **redirection** grâce à une autre fonction nommée [signInWithRedirect()](https://firebase.google.com/docs/reference/js/auth.md?hl=en#signinwithredirect)
 
 De la même façon que dans le chapitre précédent, cette fonction **renvoie une promesse** dont la valeur sera un objet de type [UserCredentials](https://firebase.google.com/docs/reference/js/auth.usercredential.md#usercredential_interface) si l'utilisateur a validé la popup de connexion.
@@ -91,7 +91,7 @@ const user = credentials.user;
 console.log(`Utilisateur connecté via Google !`, user);
 ```
 
-> 💡 **Note :**
+> **Note** :
 > Pour des raisons de simplicité, le code ci-dessus a été simplifié, mais il est évident qu'il faut toujours penser à gérer les potentielles erreurs avec un bloc `try/catch`, et n'activer une action d'authentification que lors d'une interaction utilisateur, par exemple après un clic sur un bouton.
 
 #### Explications du code

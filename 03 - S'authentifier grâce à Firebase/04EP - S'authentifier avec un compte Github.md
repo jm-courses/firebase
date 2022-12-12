@@ -41,8 +41,7 @@ Nous allons maintenant créer une application Github. Pour cela, ouvrez un nouve
 
 <p align="center"><img src="./images/auth-github-new-app.png"></p>
 
-> 💡 **Note :**
->
+> **Note** :
 > Cette page est accessible depuis le menu `Settings >> Developer settings >> OAuth apps`
 
 Cliquez sur le bouton « Register a new application »

@@ -117,7 +117,7 @@ async function inscription() {
 
 Si tout se passe correctement, l'ensemble des instructions du bloc `try` vont s'exécuter sans problèmes, et si une erreur survient, on la gère directement dans le bloc `catch`
 
-> 💡 **Note :**
+> **Note** :
 > Dans un véritable cas de figure, au lieu de faire un `console.log`, nous afficherions plutôt les messages d'erreur et de succès dans une `<div>` de la page web pour informer l'utilisateur :
 > <p align="center"><img src="./images/auth-error.png"></p>
 > <p align="center"><img src="./images/auth-success.png"></p>
@@ -163,7 +163,7 @@ Les cas d'erreur les plus courants sont (de manière non exhaustive) :
 - Adresse email pas encore inscrite
 - Mot de passe invalide
 
-> ℹ **Information**
+> **Note** :
 > Il est évident que Firebase ne stocke pas en clair les mots de passe et utilise des algorithmes de hachage que lui-seul connaît. De cette façon, les identifiants de nos utilisateurs sont en sécurité.
 > Cette abstraction est gérée par Firebase lui-même, et nous n'avons pas à nous en soucier de notre côté.
 
@@ -191,7 +191,7 @@ Les propriétés suivantes (liste non exhaustive) sont donc accessibles sur cet 
 - `photoURL` : L'URL de la photo de profil de l'utilisateur
 - `providerId` : Nom du provider utilisé par l'utilisateur pour s'authentifier (si applicable)
 
-> **⚠️ Attention**
+> **Warning** :
 > Il est important de noter que ces propriétés sont présentes **de façon normalisée** pour nous permettre en tant que développeur de les traiter facilement.
 > Ex: Un utilisateur qui se connecte via login et mot de passe n'aura pas de `displayName` associé, ce qui pourra en revanche être le cas d'un utilisateur authentifié via "Facebook Connect" (sauf s'il ne le permet pas dans ses paramètres de sécurité). C'est pareil pour son adresse email …
 > Ne vous étonnez donc pas si ces valeurs sont vides pour certains utilisateurs et non pour d'autres.

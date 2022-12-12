@@ -76,7 +76,7 @@ comments.forEach(comment => {
 
 Pour lire les données en temps réel, on va pouvoir utiliser la méthode `onValue()` qui permet de surveiller les changements effectués sur un noeuds, et de réagir en conséquence :
 
-> 💡 **Note** :
+> **Note** :
 > Afin d'éviter de surcharger les exemples de code, on suppose à partir de maintenant qu'une instance vers `db` a déjà été récupérée au préalable.
 
 ```js
