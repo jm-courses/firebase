@@ -2,8 +2,9 @@
 
 À l'issue de ce module, vous serez capable de :
 
-1. Comprendre la différence entre …
-2. Savoir à quoi sert …
+1. Récupérer les données depuis une Realtime DB
+2. Surveiller les changements en direct dans la base
+3. Trier et organiser les données récupérer
 
 ---
 
@@ -163,6 +164,8 @@ onValue(commentsQuery, (snapshot) => {
 //  }
 ```
 
+Une requête [Query](https://firebase.google.com/docs/reference/js/database.query?hl=en) permet donc d'être plus spécifique sur les données à récupérer.
+
 ---
 
 # Pour aller plus loin
@@ -173,10 +176,12 @@ onValue(commentsQuery, (snapshot) => {
 
 # Vos points clés à retenir
 
-- 
-- 
+- `get()` permet de récupérer les données une seule fois
+- `onValue()` et `onChildAdded()` permettent de surveiller et réagir aux changements en direct
+- On peut filtrer et/ou trier les données avec les [Query](https://firebase.google.com/docs/reference/js/database.query?hl=en)
 
 # Conclusion
 
-Maintenant que vous savez … nous allons découvrir …
-Si vous avez du mal avec …, nous vous inquiétez pas, nous aborderons … dans le prochain chapitre
+Maintenant que vous savez lire les données en temps réel depuis une Realtime DB nous allons nous intéresser à la modification et la suppression d'un noeud.
+
+À tout de suite dans le prochain chapitre 😉
