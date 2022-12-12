@@ -134,7 +134,7 @@ function remove(ref: DatabaseReference): Promise<void>;
 >     pseudo: 'jmclery'
 >   });
 > 
->   await delete(comm04Ref);
+>   await remove(comm04Ref);
 > 
 >   console.log('Modifications effectuées');
 > }
@@ -155,7 +155,7 @@ function remove(ref: DatabaseReference): Promise<void>;
 # Vos points clés à retenir
 
 - Les modifications se font avec les fonctions `update()` (partielle) et `set()` (complète)
-- La suppression se fait avec la fonction `delete()`
+- La suppression se fait avec la fonction `remove()`
 
 # Conclusion
 
