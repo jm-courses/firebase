@@ -24,13 +24,13 @@ Pour plus de détails, consultez la [page Wikipédia sur Firebase](https://fr.wi
 
 ## Historique
 
-La création de Firebase date de 2011, et s'appelait à l'époque _Envolve_.
+La création de Firebase date de 2011. A l’époque Firebase s'appelait _Envolve_.
 
 Avant d'appartenir à Google, c'était un simple service en ligne de stockage et synchronisation de données en temps réel.
 
-Le projet connaît un succès fulgurant et est utilisé en 2014 par plus de 110 000 développeurs à travers le monde.
+Le projet connaît un succès fulgurant : en 2014, il est utilisé par plus de 110 000 développeurs à travers le monde.
 
-Google rachètera dans la même année le projet pour l'intégrer à son Cloud (la **GCP** : Google Cloud Platform), et va contribuer à son amélioration en lui ajoutant progressivement tout un tas de services.
+Dans la même année, Google rachète le projet pour l'intégrer à son Cloud (la **GCP** : Google Cloud Platform), et va contribuer à son amélioration en lui ajoutant progressivement tout un tas de services.
 
 ## Pourquoi utiliser Firebase ?
 
