@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <base href="/public/" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <title>Firebase Playground</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" defer></script>
+
+    <script src="bundle/index.js" defer></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">🔥 Firebase Playground</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#fbnavbar"
+          aria-controls="fbnavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="fbnavbar">
+          <div class="navbar-nav">
+            <a class="nav-link" href="authentication.html">Authentication</a>
+            <a class="nav-link" href="realtime-db.html">Real-time DB</a>
+            <a class="nav-link" href="firestore.html">Firestore</a>
+            <a class="nav-link" href="storage.html">Storage</a>
+          </div>
+          <!-- ==================== PROFIL UTILISATEUR ================= -->
+          <div class="navbar-nav" id="user">
+            <a href="#" class="nav-link" id="logout-link"> Déconnexion </a>
+            <img src="assets/images/profile.png" alt="Man" id="user-image" class="rounded-circle" width="40" />
+            <span class="navbar-text px-2" id="user-name"> &lt;Prénom&gt; &lt;NOM&gt; </span>
+          </div>
+          <!-- ========================================================= -->
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <h1 class="mb-4">Terrain de jeu pour Firebase</h1>
+
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Authentication</h5>
+              <p class="card-text">Faire de la connexion sociale avec Firebase</p>
+              <a href="authentication.html" class="btn btn-sm btn-secondary stretched-link">Go</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Real-time DB</h5>
+              <p class="card-text">Base de données en temps réel, orientée JSON</p>
+              <a href="realtime-db.html" class="btn btn-sm btn-secondary stretched-link">Go</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Firestore</h5>
+              <p class="card-text">Base de données en temps réel, orientée documents</p>
+              <a href="firestore.html" class="btn btn-sm btn-secondary stretched-link">Go</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Storage</h5>
+              <p class="card-text">Télécharger des fichiers sur le cloud Firebase</p>
+              <a href="storage.html" class="btn btn-sm btn-secondary stretched-link">Go</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "firebase-playground",
+  "version": "1.0.0",
+  "description": "Un projet de terrain de jeu pour apprendre Firebase",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack"
+  },
+  "keywords": [],
+  "author": "J.M. Cléry",
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}

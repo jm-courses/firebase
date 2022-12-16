@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <base href="/public/" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <title>Firebase Playground</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" defer></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">🔥 Firebase Playground</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#fbnavbar"
+          aria-controls="fbnavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="fbnavbar">
+          <div class="navbar-nav">
+            <a class="nav-link" href="authentication.html">Authentication</a>
+            <a class="nav-link active" href="realtime-db.html">Real-time DB</a>
+            <a class="nav-link" href="firestore.html">Firestore</a>
+            <a class="nav-link" href="storage.html">Storage</a>
+          </div>
+          <!-- ==================== PROFIL UTILISATEUR ================= -->
+          <div class="navbar-nav" id="user">
+            <a href="#" class="nav-link" id="logout-link"> Déconnexion </a>
+            <img src="assets/images/profile.png" alt="Man" id="user-image" class="rounded-circle" width="40" />
+            <span class="navbar-text px-2" id="user-name"> &lt;Prénom&gt; &lt;NOM&gt; </span>
+          </div>
+          <!-- ========================================================= -->
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <h1 class="mb-4">Realtime Database</h1>
+      <hr />
+
+      <!-- ================== ALERTE À AFFICHER SI NON CONNECTÉ ===================-->
+      <div class="alert alert-warning" role="alert">
+        Vous devez d'abord être connecté pour afficher cette page !<br />
+        <a href="authentication.html" class="link-dark">Aller à l'authentification</a>
+      </div>
+      <!-- ========================================================================-->
+
+      <!-- LISTE DES MESSAGES -->
+      <div class="col my-4">
+        <form class="form form-inline" id="addMessageForm">
+          <h3>Tchat en direct</h3>
+          <div class="input-group mb-3">
+            <input type="text" id="message" class="form-control" autofocus placeholder="Votre message ici …" />
+            <button class="btn btn-primary" type="submit">Envoyer</button>
+          </div>
+        </form>
+        <hr />
+        <div id="messages" class="my-4">
+          <!-- ==== ZONE D'AFFICHAGE DES MESSAGES ==== -->
+          <!-- =========================-->
+          <div class="d-flex my-2">
+            <div class="flex-shrink-0">
+              <img src="https://randomuser.me/api/portraits/med/men/54.jpg" alt="Photo de David MARTIN" width="40" class="rounded-circle" />
+            </div>
+            <div class="flex-grow-1 ms-3 d-flex flex-column">
+              <strong>David MARTIN</strong>
+              <span>Hello !</span>
+            </div>
+          </div>
+          <!-- =========================-->
+          <div class="d-flex my-2">
+            <div class="flex-shrink-0">
+              <img src="https://randomuser.me/api/portraits/med/men/32.jpg" alt="Photo de Gaspard OLIVIER" width="40" class="rounded-circle" />
+            </div>
+            <div class="flex-grow-1 ms-3 d-flex flex-column">
+              <strong>Gaspard OLIVIER</strong>
+              <span>Bienvenue sur le chat</span>
+            </div>
+          </div>
+          <!-- =========================-->
+          … etc.
+          <!-- =========================-->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
