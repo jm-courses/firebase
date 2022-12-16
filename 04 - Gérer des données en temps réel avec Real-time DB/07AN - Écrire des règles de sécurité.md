@@ -2,14 +2,14 @@
 
 À l'issue de ce module, vous serez capable de :
 
-1. Comprendre le fonctionnement des règles de sécuritésécurité
+1. Comprendre le fonctionnement des règles de sécurité
 2. Écrire vos règles de sécurité en fonction de vos données
 
 ---
 
 ## Présentation
 
-Les règles de sécurité sont essentielles pour éviter que n'importe qui accède ou altère les données présentes dans la base.
+Les règles de sécurité sont essentielles pour éviter que n'importe qui puisse accèder ou altèrer les données présentes dans la base.
 
 Le sujet des règles de sécurité de Firebase est très vaste et comporte de nombreuses subtilités et spécificités.
 
@@ -17,11 +17,11 @@ Dans ce chapitre, nous allons aborder les bases pour écrire des règles simples
 
 ## Qu'est-ce qu'une règle ?
 
-Les règles de sécurité s'écrivent directement dans la **console Firebase**, dans l'onglet _« Rules »_ du menu _« Realtime Database »_ :
+Les règles de sécurité s'écrivent directement dans la **console Firebase**, dans l'onglet _« Règles »_ du menu _« Realtime Database »_ :
 
 <p align="center"><img src="./images/rules-panel.png"></p>
 
-Par défaut, les règles spécifiées pour le **mode test** précédemment choisi ressemblent pour l'instant à :
+Par défaut, les règles spécifiées pour le **mode test** précédemment choisi ressemblent pour l'instant à ceci :
 
 <p align="center"><img src="./images/rules-default.png"></p>
 
@@ -53,7 +53,7 @@ Ici, tout le monde peut lire la base (comprendre : tous les noeuds disponibles �
 
 L'écriture des règles doit dépendre de la structure de vos données.
 
-Admettons la structure de données suivante dans la base, avec un noeud `comments` et un noeud `chat-messages` :
+Admettons la structure de données suivante dans la base, avec un noeud `comments` représentant des commentaires, et un noeud `chat-messages` représentant les messages d'un tchat en ligne :
 
 ```json
 {
@@ -77,7 +77,7 @@ Admettons la structure de données suivante dans la base, avec un noeud `comment
 }
 ```
 
-En écrivant des règles qui suivent **la même structure de données**, on peut avoir différents comportement pour différents noeuds :
+En écrivant des règles qui suivent **la même structure de données**, on peut avoir différents comportement pour les différents noeuds :
 
 ```json
 {
@@ -95,7 +95,7 @@ En écrivant des règles qui suivent **la même structure de données**, on peut
 }
 ```
 
-Ici, n'importe qui pourra lire et écrire dans le noeud `chat-messages`, mais le noeud `comments` n'est accessible qu'en lecture seule :
+Ici, n'importe qui pourra lire et écrire dans le noeud `chat-messages`, mais le noeud `comments` n'est accessible qu'en lecture seule côté client :
 
 ```js
 const commentsRef = ref(db, '/comments');
@@ -104,7 +104,7 @@ await get(commentsRef); // ✅ AUTORISÉ
 push(commentsRef, { … }); // ❌ REFUSÉ
 ```
 
-À noter que ces règles `.read` et `.write` s'appliquent en cascade, ce qui signifie que la première règle trouvée et validée est prioritaire, et ce même sur les noeuds enfants.
+À noter que ces règles `.read` et `.write` s'appliquent en cascade, ce qui signifie que **la première règle trouvée et validée est prioritaire**, et ce même sur les noeuds enfants.
 
 ```json
 {
@@ -134,7 +134,7 @@ Admettons de nouveau les données suivantes pour les messages d'un tchat :
 }
 ```
 
-Si on souhaite définir un accès en lecture pour ces deux noeuds, on pourrait l'écrire de la façon suivante :
+Si on souhaite définir un accès en lecture pour ces deux sous-noeuds, on pourrait l'écrire de la façon suivante :
 
 ```json
 {
@@ -170,9 +170,9 @@ Maintenant que nous avons vus la structure des règles de sécurité et comment 
 
 ## Les variables
 
-Les règles Firebase proposent l'utilisation de [variables](https://firebase.google.com/docs/database/security/rules-conditions?authuser=0#the_auth_variable) pour offrir plus de possibilités dans les conditions.
+Les règles Firebase proposent l'utilisation de [variables prédéfinies](https://firebase.google.com/docs/database/security/rules-conditions?authuser=0#the_auth_variable) pour offrir plus de possibilités dans les conditions.
 
-Les variables sont fournies par le moteur de Firebase pour chaque requête effectuée par un client.
+Ces variables sont fournies par le moteur de Firebase pour chaque requête effectuée par un client.
 
 #### La variable `auth`
 
@@ -189,11 +189,13 @@ Elle contient les informations d'un utilisateur **authentifié via Firebase Auth
 }
 ```
 
+Avec ces règles, seuls les utilisateurs authentifiés auront un droit d'accès en lecture/écriture sur le noeud `chat-messages`.
+
 #### La variable `newData`
 
-Cette variable concerne les opération d'écriture (création et modification) d'une donnée.
+Cette variable concerne les opérations d'écriture (création et modification) d'une donnée.
 
-Elle représente la donnée entrante qui sera écrite dans le noeud (si l'opération est autorisée).
+Elle représente **la donnée entrante qui sera écrite dans le noeud** (si l'opération est autorisée).
 
 Par exemple si on tente d'écrire le nouveau noeud `/chat-messages/abcdef` :
 
@@ -201,7 +203,7 @@ Par exemple si on tente d'écrire le nouveau noeud `/chat-messages/abcdef` :
 set(ref(db, '/chat-messages/abcdef'), { message: "Salut !" });
 ```
 
-Dans ce contexte, la valeur de la variable `newData` serait la donnée :
+Dans ce contexte, la valeur de la variable `newData` serait la donnée suivante :
 
 ```js
 { message: "Salut !" }
@@ -209,18 +211,14 @@ Dans ce contexte, la valeur de la variable `newData` serait la donnée :
 
 #### La variable `data`
 
-Cette variable concerne l'écriture et représente une donnée possiblement déjà existante dans la base à cet emplacement.
-
-Si la valeur n'existe pas, alors la variable vaudra `null`
+Cette variable concerne l'écriture et représente **une donnée possiblement déjà existante dans la base à cet emplacement**. Si la valeur n'existe pas, alors la variable vaudra `null`
 
 Amettons que la base contienne déjà le commentaire `abcdef` suivant :
 
 ```json
 {
   "chat-messages": {
-    "-04fdb527-8fc": { "message": "Hello!" },
-    "-c59331b9-0f7": { "message": "Hey there!" },
-    "-48a894de-b39": { "message": "Hi!" },
+    // …
     "abcdef": { "message": "Salut !" },
   }
 }
@@ -234,7 +232,7 @@ set(ref(db, '/chat-messages/abcdef'), {
 });
 ```
 
-… la valeur de variable `data` serait la donnée déjà existante **avant modification**, à savoir ici :
+… la valeur de variable `data` serait alors la donnée déjà existante **avant modification**, à savoir ici :
 
 ```js
 { "message": "Salut !" }
@@ -246,7 +244,7 @@ La valeur de `newData` quant à elle serait la nouvelle valeur à écrire, à sa
 { "message": "Salut les gens !" }
 ```
 
-On peut utiliser des méthodes sur ces variables pour connaître leur existance ou non :
+On peut utiliser des **méthodes** sur ces variables pour connaître leur existance ou non :
 
 ```js
 data.exists() // Indique si la donnée existe déjà
@@ -266,11 +264,11 @@ Il est conseillé de lire la documentation pour avoir un aperçu de toutes les p
 
 La règle `.validate` est légèrement différente à `.write` dans le sens où elle permet de contrôler la validité d'une donnée entrante.
 
-On peut par exemple souhaiter que certains champs soient en String et d'autres en Number, ou représentent une date valide.
+On peut par exemple souhaiter que certains champs soient des `String` et d'autres des `Number`, ou qu'ils représentent une date valide.
 
 Contrairement à `.read` et `.write`, toutes les règles `.validate` qui concernent le noeud spécifié doivent être validées pour que l'opération soit autorisée.
 
-Admettons que l'on souhaite avoir en base un message avec obligatoirement un texte et une date valide :
+Admettons que l'on souhaite avoir en base un noeud contenant seulement les champs `message` (en texte) et `created_at` (au format de date valide) :
 
 ```js
 {
@@ -295,7 +293,9 @@ Il faudrait écrire pour cela les règles `.validate` suivantes :
 }
 ```
 
-Grâce à cette règle, les noeuds ne doivent avoir que deux champs `message` et `created_at` étant des chaînes de caractères, et une date formatée en `YYYY-MM-DD`
+Grâce à cette règle, le champs `message` du noeud doit être une chaîne de caractères, et le champs `created_at` doit être une date formatée en `YYYY-MM-DD`.
+
+La règle de validation `"$other": { ".validate": false }` permet de s'assurer que seuls les champs `message` et `created_at` seront renseignés dans le noeud à écrire.
 
 ## Autoriser en fonction des utilisateurs
 
@@ -325,11 +325,11 @@ Notez que pour chaque message, le paramètre `uid` doit correspondre à l'identi
 
 Nous souhaiterions que les utilisateurs authentifiés puissent … :
 
-- … poster un nouveau message avec leur `uid` personnel (_bien évidemment, ils ne devraient pas pouvoir écrire un autre **uid** que le leur pour ne pas usurper l'identité d'un autre_)
+- … poster un nouveau message avec leur `uid` personnel (_ils ne peuvent pas écrire un **uid** différent du leur, afin de ne pas usurper l'identité de quelqu'un d'autre_)
 - … modifier ou supprimer leurs propres messages uniquement
-- … que chaque message soit composé des uniques champs "uid", "author", "message" et "created_at"
+- … que chaque message soit composé des uniques champs `uid`, `author`, `message` et `created_at`
 
-On peut écrire les règles suivantes :
+On peut pour cela écrire les règles suivantes :
 
 
 ```json
@@ -376,6 +376,8 @@ Enfin, on vérifie la structure de la donnée entrante (qu'il s'agisse d'une mod
 }
 ```
 
+Prenez le temps de tester ces règles avec la structure de données proposée dans votre base, pour bien comprendre le fonctionnement.
+
 ---
 
 # Pour aller plus loin
@@ -400,4 +402,4 @@ C'est pourquoi il vous est conseillé de **relire** et surtout **de tester** vos
 
 Félicitations d'avoir fini ce chapitre ! C'était un gros morçeau.
 
-Vous avez maintenant toutes les clés en main pour concevoir et réaliser des applications web en temps réel.
+Vous avez maintenant toutes les clés en main pour concevoir et réaliser des applications web en temps réel **sécurisées**.
