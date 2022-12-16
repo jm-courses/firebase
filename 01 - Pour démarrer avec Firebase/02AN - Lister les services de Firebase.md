@@ -17,7 +17,7 @@ La liste ne sera pas exhaustive car Firebase dans sa globalité est très riche,
 
 Enfin, il est bon de savoir que vous pouvez utiliser chacun de ces services indépendamment, et qu'il n'est pas du tout obligatoire de tout utiliser en même temps.
 
-## 1. Authentification
+## Authentication
 
 Firebase Authentication est un service de Firebase donnant la possibilité au développeur Web de facilement et rapidement mettre en place un module d'inscription et de connexion (= authentification) des visiteurs du site.
 
@@ -25,7 +25,7 @@ Il est possible d'authentifier ses utilisateurs en leur proposant de façon clas
 
 Nous découvrirons comment utiliser ces éléments dans le chapitre dédié à l'authentification.
 
-## Real-time DB
+## Realtime Database
 
 Real-time Database correspond au service historique de Firebase permettant d'échanger en temps réel et à haute vitesse des données structurées sous forme de noeuds JSON.
 
@@ -34,7 +34,7 @@ Le temps de réponse garanti est inférieur à 500 milli-secondes et est adapté
 Le format simplifié de noeuds JSON permet des échanges rapides, mais n'offre pas de flexibilité dans la structuration des données (relations, types).
 
 ## Firestore
-client
+
 Cloud Firestore est arrivé peu après Real-time DB et permet également de faire du temps réel avec une latence légèrement plus élevée, mais offre un modèle de structuration des données plus complexe avec des collections et des documents, dont les propriétés peuvent être typées (string, nombre, date, map, geopoint, …).
 
 De plus, Cloud Firestore offre une capacité de stockage très grande en tirant partie de l'infrastructure de Google et permet au développeur web de ne pas se soucier des problématiques de charge serveur et de scalabilité.
