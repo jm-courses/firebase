@@ -68,7 +68,7 @@ En fin de compte, le choix dépend des besoins spécifiques de votre application
 
 # Pour aller plus loin
 
-- [Choose a database: Cloud Firestore or Realtime Database](https://firebase.google.com/docs/firestore/rtdb-vs-firestore?authuser=0)
+- [Choose a database: Cloud Firestore or Realtime Database](https://firebase.google.com/docs/firestore/rtdb-vs-firestore)
 
 # Vos points clés à retenir
 
