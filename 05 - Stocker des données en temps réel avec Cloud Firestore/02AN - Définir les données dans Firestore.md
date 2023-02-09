@@ -1,4 +1,4 @@
-# Structurer les données dans Firestore
+# Définir les données dans Firestore
 
 À l'issue de ce module, vous serez capable de :
 
