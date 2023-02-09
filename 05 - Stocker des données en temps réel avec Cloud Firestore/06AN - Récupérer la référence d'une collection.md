@@ -41,6 +41,8 @@ Admettons le document portant l'ID `GOzaQ8t6VJCC1xrulU16` et se trouvant dans la
 On peut alors obtenir la référence pointant vers ce document avec la fonction `doc` du package `firebase/firestore` :
 
 ```js
+import { doc } from 'firebase/firestore';
+…
 const bookRef = doc(booksCollection, 'GOzaQ8t6VJCC1xrulU16');
 ```
 

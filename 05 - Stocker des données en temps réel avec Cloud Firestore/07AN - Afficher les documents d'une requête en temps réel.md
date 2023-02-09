@@ -25,6 +25,8 @@ Reprenons notre document `GOzaQ8t6VJCC1xrulU16` de la collection `livres` du cha
 Pour obtenir le document, on utilise `getDoc()` en lui passant la référence du document ciblé :
 
 ```js
+import { doc, getDoc } from 'firebase/firestore';
+
 …
 
 const bookRef = doc(db, 'livres/GOzaQ8t6VJCC1xrulU16');
@@ -55,6 +57,7 @@ Dans le code précédent, on récupère `book.auteur` qui est une référence à
 Nous savons déjà comment obtenir la valeur d'une référence :
 
 ```js
+…
 const book = bookDoc.data();
 
 // Récupération du document "auteurs" référencé par "book.auteur"
@@ -74,6 +77,8 @@ console.log(book.prix);
 Pour lire l'intégralité des documents d'une collection, on utilise la méthode `getDocs` du package `firebase/firestore` :
 
 ```js
+import { getDocs, collection } from 'firebase/firestore';
+
 …
 
 const booksCollection = collection(db, 'livres');
