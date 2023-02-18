@@ -37,10 +37,7 @@ Et voilà ! Votre base de données Firestore est configurée et prête à l'empl
 
 Ne reste qu'à importer le SDK JavaScript dans la page web pour continuer.
 
-(continuer à partir d'ici)
----
-
-## Créer le fichier pour la base de données
+## Créer le fichier pour Firestore
 
 Dans le projet « Firebase Playground » se trouve une page `public/firestore.html`.
 
