@@ -8,4 +8,8 @@ module.exports = {
   },
   mode: process.env.NODE_ENV,
   watch: true,
+  experiments: {
+    topLevelAwait: true,
+  },
+  devtool: 'source-map',
 };

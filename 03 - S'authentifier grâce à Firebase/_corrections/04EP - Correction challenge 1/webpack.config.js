@@ -14,4 +14,5 @@ module.exports = {
   experiments: {
     topLevelAwait: true,
   },
+  devtool: 'source-map',
 };
