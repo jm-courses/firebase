@@ -106,7 +106,7 @@ Dans les prochains chapitres, nous allons étudier ces méthodes pour manipuler 
 
 - Le service Firestore doit être activé depuis la console Firebase
 - L'instance du service se créer avec la fonction `getFirestore()`
-- L'instance créée va permettre d'utiliser les fonctions du SKD JavaScript relatives à Firestore
+- L'instance créée va permettre d'utiliser les fonctions du SDK JavaScript relatives à Firestore
 
 # Conclusion
 
