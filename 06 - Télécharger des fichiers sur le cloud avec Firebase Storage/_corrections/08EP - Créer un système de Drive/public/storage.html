@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <base href="/public/" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <title>Firebase Playground</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" defer></script>
+
+    <script src="bundle/storage.js" defer></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">🔥 Firebase Playground</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#fbnavbar"
+          aria-controls="fbnavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="fbnavbar">
+          <div class="navbar-nav">
+            <a class="nav-link" href="authentication.html">Authentication</a>
+            <a class="nav-link" href="realtime-db.html">Real-time DB</a>
+            <a class="nav-link" href="firestore.html">Firestore</a>
+            <a class="nav-link active" href="storage.html">Storage</a>
+          </div>
+          <!-- ==================== PROFIL UTILISATEUR ================= -->
+          <div class="navbar-nav" id="user">
+            <a href="#" class="nav-link" id="logout-link"> Déconnexion </a>
+            <img src="assets/images/profile.png" alt="Man" id="user-image" class="rounded-circle" width="40" />
+            <span class="navbar-text px-2" id="user-name"> &lt;Prénom&gt; &lt;NOM&gt; </span>
+          </div>
+          <!-- ========================================================= -->
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <h1 class="mb-4">Storage</h1>
+      <hr />
+
+      <!-- ================== ALERTE À AFFICHER SI NON CONNECTÉ ===================-->
+      <div class="alert alert-warning" role="alert">
+        Vous devez d'abord être connecté pour afficher cette page !<br />
+        <a href="authentication.html" class="link-dark">Aller à l'authentification</a>
+      </div>
+      <!-- ========================================================================-->
+
+      <form id="addFileForm">
+        <label for="file" class="form-label">Fichier à télécharger :</label>
+        <input class="form-control form-control-lg" id="file" type="file" />
+      </form>
+
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" id="progress" style="width: 10%"></div>
+      </div>
+
+      <div class="form-group mt-2 d-flex justify-content-end" id="action-buttons">
+        <button class="btn btn-danger btn-sm" id="cancel-download" style="display: none;">Annuler le téléchargement</button>
+      </div>
+
+      <!-- ============= Listing des fichiers ============= -->
+      <h2 class="mt-5">Liste des fichiers</h2>
+      <hr />
+      <table border="0" cellpadding="0" cellspacing="0" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Titre</th>
+            <th>Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="files-list"></tbody>
+      </table>
+    </div>
+  </body>
+</html>
