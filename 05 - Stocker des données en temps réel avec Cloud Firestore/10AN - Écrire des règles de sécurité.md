@@ -1,4 +1,4 @@
-# Écrire des règles de sécurité
+# 10AN - Écrire des règles de sécurité
 
 À l'issue de ce module, vous serez capable de :
 
@@ -117,7 +117,7 @@ match /posts/{post} {
   allow read: if <condition>; // ⚠️ Ne s'applique qu'aux `post`
 
   match /comments/{comment} {
-    allow read: if <condition>; // ✅ S'applique aux `post` et aux `comment`
+    allow read: if <condition>; // ✅ S'applique aux `comment`
   }
 }
 ```
@@ -126,7 +126,7 @@ match /posts/{post} {
 
 ```text
 match /posts/{document=**} {
-  allow read: if <condition>; // ✅ S'applique aux `post` et aux `comment`
+  allow read: if <condition>; // ✅ S'applique à tous les sous-documents de la collection `posts`
 }
 ```
 
@@ -142,7 +142,7 @@ On peut valider à l'aide d'une condition les informations suivantes :
 
 - Vérifier l'identité de l'utilisateur connecté (Authentication)
 - Valider les données envoyées dans la requête
-- Accéder à des données externes (Firestore, Real-time Database, Storage, etc.)
+- Accéder à des données externes (Real-time Database, Storage, etc.)
 
 ### Vérifier l'identité de l'utilisateur connecté
 

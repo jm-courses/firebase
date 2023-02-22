@@ -1,4 +1,4 @@
-# Créer un CRUD pour gérer une base de consoles vidéo
+# 11EF - Créer un CRUD pour gérer une base de consoles vidéo
 
 À l'issue de ce module, vous serez capable de :
 
@@ -67,7 +67,7 @@ Voici une animation faisant la démonstration du résultat attendu :
 
 Vous devez respecter les consignes suivantes :
 
-1. N'autoriser l'accès à la page de chat que si l'utilisateur est authentifié avec Firebase (s'il n'est pas authentifié, rediriger l'utilisateur vers la page d'authentification)
+1. N'autoriser l'accès à la page de consoles que si l'utilisateur est authentifié avec Firebase (s'il n'est pas authentifié, rediriger l'utilisateur vers la page d'authentification)
 
 2. L'affichage dans le DOM doit pouvoir se faire en temps réel, c'est-à-dire que si un utilisateur ajoute une console, cette console doit apparaître dans le DOM sans avoir à recharger la page. De même si une console est modifiée ou supprimée, le DOM doit être mis à jour en temps réel.
 
