@@ -2,7 +2,7 @@
 
 > **Warning** : Cette fiche est à disposition du formateur uniquement ! Merci de ne pas partager aux apprenants.
 
-L'objectif ici est de vérifier que l'apprenant a bien configuré son environnement de travail pour le projet distribué `firebase-playground-base.zip`, et ce conformément à la vidéo du chapitre précédent.
+L'objectif ici est de vérifier que l'apprenant a bien configuré son environnement de travail pour le projet distribué `03AN.2 - firebase-playground-base.zip`, et ce conformément à la vidéo du chapitre précédent.
 
 Assurez-vous de vérifier point par point les éléments de la todolist ci-après avec chaque apprenant avant de continuer.
 
