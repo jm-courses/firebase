@@ -39,7 +39,7 @@ Pour commencer, rendez-vous dans votre [Console Firebase](https://console.fireba
 1. Dans le menu de gauche, déroulez le panneau **Créer** et cliquez sur **Authentication**
 2. Dans la page de droite, cliquez sur le bouton **Commencer**
 
-<p align="center"><img src="./images/auth-activate.png"></p>
+<p align="center"><img src="./images/auth-activate.png" width="650"></p>
 
 Cela va activer le service d'Authentification pour ce projet Firebase.
 
@@ -76,7 +76,7 @@ Dans le projet « Firebase Playground » se trouve une page `public/authenticati
 
 Ouvrez-la avec _Live Server_.
 
-<p align="center"><img src="./images/auth-page-base.png"></p>
+<p align="center"><img src="./images/auth-page-base.png" width="800"></p>
 
 C'est sur cette page que vous allez travailler pour tout ce qui concerne la partie _Authentication_ dans ce cours.
 
@@ -130,7 +130,7 @@ Afin de vérifier qu'il n'y a aucun problème, n'hésitez pas à ajouter un mess
 console.log("Objet d'instance", auth);
 ```
 
-<p align="center"><img src="./images/auth-log-instance.png"></p>
+<p align="center"><img src="./images/auth-log-instance.png" width="550"></p>
 
 ---
 

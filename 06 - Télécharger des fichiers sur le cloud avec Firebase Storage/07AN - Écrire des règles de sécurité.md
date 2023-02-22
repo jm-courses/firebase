@@ -1,4 +1,4 @@
-# 07AN - Écrire des règles de sécurité
+# Écrire des règles de sécurité
 
 À l'issue de ce module, vous serez capable de :
 
@@ -22,7 +22,7 @@ Les règles de sécurité s'écrivent directement dans la **console Firebase**, 
 
 Par défaut, les règles spécifiées pour le **mode test** précédemment choisi ressemblent pour l'instant à ceci :
 
-<p align="center"><img src="./images/rules-default.png"></p>
+<p align="center"><img src="./images/rules-default.png" width="800"></p>
 
 ## Écrire des règles simples
 
@@ -40,7 +40,7 @@ Elles permettent de cibler les **chemins** vers des références et proposent de
 Les règles démarrent **toujours** avec la déclaration suivante :
 
 ```text
-rules_version = '2';
+rules_version = '2'; // Nécessaire pour utiliser les fonctions de listing
 service firebase.storage {
   // ...
 }

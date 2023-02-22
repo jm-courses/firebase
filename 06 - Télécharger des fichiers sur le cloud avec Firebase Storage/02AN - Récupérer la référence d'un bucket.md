@@ -1,4 +1,4 @@
-# 02AN - Récupérer la référence d'un bucket
+# Récupérer la référence d'un bucket
 
 À l'issue de ce module, vous serez capable de :
 

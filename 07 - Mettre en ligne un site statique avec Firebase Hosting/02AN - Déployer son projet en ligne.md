@@ -1,4 +1,4 @@
-# 02AN - Déployer son projet en ligne
+# Déployer son projet en ligne
 
 À l'issue de ce module, vous serez capable de :
 

@@ -1,4 +1,4 @@
-# 10AN - Écrire des règles de sécurité
+# Écrire des règles de sécurité
 
 À l'issue de ce module, vous serez capable de :
 
@@ -17,7 +17,7 @@ Pour créer des systèmes d'accès basés sur les utilisateurs et les rôles qui
 >
 > Par défaut, les règles de sécurité utilisent la version 1 de l'API de sécurité.
 > La version 2 apporte quelques fonctionnalités en plus, mais elle change aussi le comportement de l'opérateur `{name=**}` que nous utiliserons dans ce chapitre.
-> Faites attention à bien utiliser la version 1 de l'API de sécurité dans ce cours, ou consulter la [documentation pour la version 2](https://firebase.google.com/docs/firestore/security/get-started?hl=en).
+> N'hésitez pas à consulter la [documentation pour la version 2](https://firebase.google.com/docs/firestore/security/get-started?hl=en).
 
 Les règles de sécurité s'écrivent directement dans la **console Firebase**, dans l'onglet _« Règles »_ du menu _« Firestore Database »_ :
 

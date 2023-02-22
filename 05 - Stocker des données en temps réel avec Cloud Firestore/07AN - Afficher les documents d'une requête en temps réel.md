@@ -1,4 +1,4 @@
-# 07AN - Afficher les documents d'une requête en temps réel
+# Afficher les documents d'une requête en temps réel
 
 À l'issue de ce module, vous serez capable de :
 

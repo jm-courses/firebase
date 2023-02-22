@@ -1,4 +1,4 @@
-# 05AN - Lister les fichiers
+# Lister les fichiers
 
 À l'issue de ce module, vous serez capable de :
 

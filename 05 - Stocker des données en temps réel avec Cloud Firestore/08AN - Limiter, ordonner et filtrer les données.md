@@ -1,4 +1,4 @@
-# 08AN - Limiter, ordonner et filtrer les données
+# Limiter, ordonner et filtrer les données
 
 À l'issue de ce module, vous serez capable de :
 

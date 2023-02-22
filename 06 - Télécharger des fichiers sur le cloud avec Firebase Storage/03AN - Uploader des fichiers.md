@@ -1,4 +1,4 @@
-# 03AN - Uploader des fichiers
+# Uploader des fichiers
 
 À l'issue de ce module, vous serez capable de :
 

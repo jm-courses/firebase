@@ -63,7 +63,7 @@ onAuthStateChanged(auth, (user) => {
 Maintenant que vous savez comment récupérer une session existante, vous allez devoir mettre en place le comportement suivant dans projet :
 
 > « Lorsqu'un utilisateur déjà connecté précédemment rafraîchit la page web, le header doit automatiquement se mettre à jour avec les données de la session. »
-> <p align="center"><img src="./images/auth-header-demo-2.png"></p>
+> <p align="center"><img src="./images/auth-header-demo-2.png" width="250"></p>
 
 ---
 

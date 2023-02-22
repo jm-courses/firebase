@@ -4,7 +4,7 @@
 
 1. Récupérer les données depuis une Realtime DB
 2. Surveiller les changements en direct dans la base
-3. Trier et organiser les données récupérer
+3. Trier et organiser les données récupérées
 
 ---
 

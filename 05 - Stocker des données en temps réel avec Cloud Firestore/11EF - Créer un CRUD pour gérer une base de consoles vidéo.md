@@ -1,4 +1,4 @@
-# 11EF - Créer un CRUD pour gérer une base de consoles vidéo
+# Créer un CRUD pour gérer une base de consoles vidéo
 
 À l'issue de ce module, vous serez capable de :
 

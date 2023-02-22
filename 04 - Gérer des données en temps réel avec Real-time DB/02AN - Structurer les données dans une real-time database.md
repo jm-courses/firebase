@@ -2,7 +2,7 @@
 
 À l'issue de ce module, vous serez capable de :
 
-1. Savoir comment sont structurés les données dans ce type de base
+1. Savoir comment sont structurées les données dans ce type de base
 
 ---
 

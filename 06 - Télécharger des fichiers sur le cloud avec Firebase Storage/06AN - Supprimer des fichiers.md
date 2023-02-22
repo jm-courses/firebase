@@ -1,4 +1,4 @@
-# 06AN - Supprimer des fichiers
+# Supprimer des fichiers
 
 À l'issue de ce module, vous serez capable de :
 

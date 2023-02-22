@@ -1,4 +1,4 @@
-# 06AN - Références de collection et de document
+# Références de collection et de document
 
 À l'issue de ce module, vous serez capable de :
 

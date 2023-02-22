@@ -1,4 +1,4 @@
-# 08EP - Créer un système de Drive
+# Créer un système de Drive
 
 À l'issue de ce module, vous serez capable de :
 

@@ -1,4 +1,4 @@
-# 09AN - Insérer, modifier et supprimer un document
+# Insérer, modifier et supprimer un document
 
 À l'issue de ce module, vous serez capable de :
 

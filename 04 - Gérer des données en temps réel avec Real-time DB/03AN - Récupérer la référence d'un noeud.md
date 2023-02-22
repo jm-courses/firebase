@@ -19,7 +19,7 @@ La fonction `ref` du package `firebase/database` permet de se positionner sur un
 
 Soit la base suivante :
 
-<p align="center"><img src="images/db-comments.png" width="750"></p>
+<p align="center"><img src="images/db-comments.png" width="600"></p>
 
 Si on souhaite se positionner sur le noeud racine représentant tous les commentaires, on va écrire :
 

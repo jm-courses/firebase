@@ -1,4 +1,4 @@
-# 01AN - Configurer son projet pour utiliser Firebase Hosting
+# Configurer son projet pour utiliser Firebase Hosting
 
 À l'issue de ce module, vous serez capable de :
 
