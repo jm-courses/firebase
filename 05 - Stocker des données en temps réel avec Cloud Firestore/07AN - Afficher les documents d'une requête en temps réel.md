@@ -111,7 +111,7 @@ Cette méthode prend en paramètre une **référence de document ou de collectio
 ```js
 const bookRef = doc(db, 'livres/GOzaQ8t6VJCC1xrulU16');
 
-onSnapshot(bookRef, async (bookDoc) => {
+onSnapshot(bookRef, (bookDoc) => {
   const book = bookDoc.data();
   
   // [SNAPSHOT]
